@@ -1,0 +1,141 @@
+@media screen and (max-width: 600px) {
+  *i{
+    font-size: 175%;
+  }
+  .icons{
+      a, button{
+          i{
+            font-size: 60%;
+            }
+        }
+    }
+    .row{
+        height:80%;
+        #left-side{
+            height:70%;
+            margin-top: 20%;
+        }
+    }
+}
+
+@media screen and (min-width: 600px){
+    nav{
+        ul{
+            li{
+                a:hover{
+                        span, i{
+                            color: #00aced;
+                        }
+                    border: 1px solid;
+                    border-radius: 60px;
+                    box-shadow: 0 0 2px;
+                    background-color: lightblue;
+                    transition: all 0.5s ease;
+
+                }
+            }
+        }
+    }
+}
+
+nav{
+    ul{
+        li{
+            a{
+                span{
+                    color: #657786;
+                    font-size: 2em;
+                }
+                i{
+                    color: #14171A;
+                    font-size: 150%;
+                }
+            }
+            a:hover{
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+.btn-danger:hover{
+    background-color: pink;
+}
+.btn-primary:hover{
+    background-color: lightblue;
+}
+.card-header, col{
+    background-color: #1DA1F2;
+}
+#navbarDropdown{text-transform: capitalize;}
+
+.icons{
+    // margin-left: 15%;
+    button,a{
+        border-radius: 60px;
+        color: #fff;
+
+        i{
+            width: 20%;
+            font-size: 90%;
+            margin-right: 40%;
+        }
+    }
+    a:hover{
+        opacity: 0.5;
+    }
+}
+
+.row-height{
+    height: 100vh;
+    #left-side{
+        background-image: url(images/twitter-banner.png);
+        // background-color: #1DA1F2;
+        div{
+            color: white;
+            text-align: center;
+            position: relative ;
+            top: 20%;
+        }
+    }
+    #right-side{
+        #login{
+            border-radius: 60px;
+            position: absolute;
+            right: 20%;
+            top:20%;
+        }
+        h1, h2, h4, ul{
+            text-align: center;
+            position: relative ;
+            top: 25%;
+            #signup{
+                border: 1px solid;
+                border-radius: 60px;
+                box-shadow: 0 0 2px;
+                background-color: #1DA1F2;
+                a{
+                    color: black;
+                }
+            }
+        }
+
+    }
+}
+.login-message {
+    -webkit-animation: fadeOut 2s forwards;
+    animation: fadeOut 2s forwards;
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+    background: #1DA1F2;
+    color: white;
+    text-align: center;
+}
+@-webkit-keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
