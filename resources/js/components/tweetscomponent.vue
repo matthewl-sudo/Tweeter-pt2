@@ -1,20 +1,4 @@
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
-require('./bootstrap');
-
-window.Vue = require('vue');
-
-import tweetscomponent from './components/tweetscomponent.vue';
-
-Vue.component('tweetscomponent', tweetscomponent);
-// Vue.component('tweetscomponent', require('./components/tweetscomponent.vue'));
-
-Vue.component('tweetsomponent', {
-    template: `
+<template>
     <div class="card-header p-0">
         <div class="btn-group float-right m-0">
             <button type="button" class="btn btn-outline-info dropdown-toggle p-1" style="color:black;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -33,19 +17,12 @@ Vue.component('tweetsomponent', {
             </div>
         </div>
     </div>
-    `,
-    data() {
-        return {
-            tweet: "",
+</template>
+
+<script>
+    export default {
+        mounted() {
+            console.log('Component mounted.')
         }
     }
-});
-const app = new Vue({
-    el: '#app',
-    methods: {
-
-},
-mounted() {
-    console.log('its working');
-    }
-});
+</script>

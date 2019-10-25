@@ -37,7 +37,15 @@
         }
     }
 }
-
+.list-group{
+    width:150%;
+    img{
+        width:15%
+    }
+}
+#sidebar{
+    z-index:1;
+}
 nav{
     ul{
         li{
@@ -89,8 +97,8 @@ nav{
 .row-height{
     height: 100vh;
     #left-side{
-        background-image: url(images/twitter-banner.png);
-        // background-color: #1DA1F2;
+        // background-image: url(images/twitter-banner.png);
+        background-color: #1DA1F2;
         div{
             color: white;
             text-align: center;

@@ -10679,6 +10679,18 @@ a.text-dark:focus {
   }
 }
 
+.list-group {
+  width: 150%;
+}
+
+.list-group img {
+  width: 15%;
+}
+
+#sidebar {
+  z-index: 1;
+}
+
 nav ul li a span {
   color: #657786;
   font-size: 2em;
@@ -10732,7 +10744,7 @@ col {
 }
 
 .row-height #left-side {
-  background-image: url(/images/twitter-banner.png?c72962c3e6af35d5d45d5df3494e905b);
+  background-color: #1DA1F2;
 }
 
 .row-height #left-side div {

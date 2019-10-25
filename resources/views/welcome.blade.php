@@ -20,7 +20,7 @@
     </head>
     <body>
         <div class="row row-height">
-            <div class="col-md-6 vcenter order-sm-12" id="right-side">
+            <div class="col-md-6 vcenter order-md-12" id="right-side">
                 @if (Route::has('login'))
                     @auth
                         <a href="{{ url('/home') }}"></a>
@@ -53,7 +53,7 @@
                 </ul>
                 @endif
             </div>
-            <div class="col-md-6 vcenter order-sm-1" id="left-side">
+            <div class="col-md-6 vcenter order-md-1" id="left-side">
                 <div class="">
                     <h2>You’re one step away from the shiny new Twitter.com</h2>
                     <h4>We’ve added tons of cool features, including …</h4>
