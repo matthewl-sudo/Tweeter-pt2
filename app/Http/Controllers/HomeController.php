@@ -32,9 +32,14 @@ class HomeController extends Controller
     public function index(){
         $tweetModel = new Tweet();
         $tweets = $tweetModel->orderBy('created_at', 'DESC')->with('comment')->get();
+        // return $tweets->toJson();
+        // $jsonTweets = json_encode($tweets);
+        // var_dump($jsonTweets);
+        // return $jsonTweets;
 
-        $tweetsContainer = [];
-        foreach ($tweets as $tweet) {//like counter
+
+        $tweetsContainer = [];  //like counter
+        foreach ($tweets as $tweet) {
             $aTweet = [];
             $aTweet["tweet_id"] = $tweet->id;
             $aTweet["tweet"] = $tweet->tweet;
@@ -42,6 +47,7 @@ class HomeController extends Controller
             $tweetLikes = count($tweetLikesArray);
             $aTweet["likes"] = $tweetLikes;
             $tweetsContainer[$tweet->id] = $aTweet;
+            
         }
         $userId = Auth::user()->id;
         $userModel = new User();
@@ -70,10 +76,7 @@ class HomeController extends Controller
             $follower['following'] = $totalFollowing;
             $followArr[$followUser->user_id] = $follower;
         }
-        // var_dump($followArr);
-        // die();
-        // dd($followUsers[0]);
-        return view('home', compact('tweets', 'tweetsContainer', 'followUsers', 'follower','users', 'followArr','user','usersContainer'));
+        return view('home', compact( 'tweetsContainer', 'followUsers', 'follower','users', 'followArr','user','usersContainer'));
     }
 
     public function showUserprofile(){

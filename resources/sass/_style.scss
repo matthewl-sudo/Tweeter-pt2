@@ -1,7 +1,7 @@
 @media screen and (max-width: 600px) {
   *i{
     font-size: 175%;
-  }
+    }
   .icons{
       a, button{
           i{
@@ -9,11 +9,20 @@
             }
         }
     }
-    .row{
-        height:80%;
-        #left-side{
-            height:70%;
-            margin-top: 20%;
+    // .row{
+    //     // height:80%;
+    //     #left-side{
+    //         height:70%;
+    //         margin-top: 20%;
+    //     }
+    // }
+    .row-height{
+        height: 150vh;
+        div{
+            margin-bottom: 1rem;
+            iframe{
+                display: none;
+            }
         }
     }
 }
@@ -36,7 +45,34 @@
             }
         }
     }
+    .row-height{
+        height: 100vh;
+    }
+
+    // ScrollMagic style
+    #reveal1 {
+    		opacity: 0;
+    		-webkit-transform: scale(0.9);
+    			 -moz-transform: scale(0.9);
+    				-ms-transform: scale(0.9);
+    				 -o-transform: scale(0.9);
+    						transform: scale(0.9);
+    		-webkit-transition: all 1s ease-in-out;
+    			 -moz-transition: all 1s ease-in-out;
+    				-ms-transition: all 1s ease-in-out;
+    				 -o-transition: all 1s ease-in-out;
+    						transition: all 1s ease-in-out;
+    	}
+    #reveal1.visible {
+    	opacity: 1;
+    	-webkit-transform: none;
+    		 -moz-transform: none;
+    			-ms-transform: none;
+    			 -o-transform: none;
+    					transform: none;
+    }
 }
+
 .list-group{
     width:150%;
     img{
@@ -93,12 +129,12 @@ nav{
         opacity: 0.5;
     }
 }
-
+// .z{ z-index: 2;
+//
+// }
 .row-height{
-    height: 100vh;
-    #left-side{
+    .left-side{
         // background-image: url(images/twitter-banner.png);
-        background-color: #1DA1F2;
         div{
             color: white;
             text-align: center;
@@ -106,14 +142,17 @@ nav{
             top: 20%;
         }
     }
-    #right-side{
+    .left-side:nth-of-type(even){
+        background-color: #1DA1F2;
+    }
+    .right-side{
         #login{
             border-radius: 60px;
             position: absolute;
             right: 20%;
             top:20%;
         }
-        h1, h2, h4, ul{
+        h1, h2, h3, h4, ul, img{
             text-align: center;
             position: relative ;
             top: 25%;
@@ -125,9 +164,11 @@ nav{
                 a{
                     color: black;
                 }
+                a:hover{
+                    z-index:2;
+                }
             }
         }
-
     }
 }
 .login-message {
@@ -146,4 +187,64 @@ nav{
 @keyframes fadeOut {
     from {opacity: 1;}
     to {opacity: 0;}
+}
+.img-fluid{
+    width:75%;
+    justify-content: center;
+}
+
+// ScrollMagic style
+.digit {
+		opacity: 0;
+		-webkit-transform: translateX(-40px);
+			 -moz-transform: translateX(-40px);
+				-ms-transform: translateX(-40px);
+				 -o-transform: translateX(-40px);
+						transform: translateX(-40px);
+		-webkit-transition: all 2.9s ease-out;
+			 -moz-transition: all 2.9s ease-out;
+				-ms-transition: all 2.9s ease-out;
+				 -o-transition: all 2.9s ease-out;
+						transition: all 2.9s ease-out;
+}
+.digit.visible {
+	opacity: 1;
+	-webkit-transform: none;
+		 -moz-transform: none;
+			-ms-transform: none;
+			 -o-transform: none;
+					transform: none;
+}
+.digit:nth-child(2) {
+	margin-top: 5px;
+}
+.digit:nth-child(3) {
+	margin-top: 10px;
+}
+.digit:nth-child(4) {
+	margin-top: 15px;
+}
+.digit:nth-child(5) {
+	margin-top: 20px;
+}
+#reveal2 {
+		opacity: 0;
+		-webkit-transform: rotate(40deg) scale(0.5);
+			 -moz-transform: rotate(40deg) scale(0.5);
+				-ms-transform: rotate(40deg) scale(0.5);
+				 -o-transform: rotate(40deg) scale(0.5);
+						transform: rotate(40deg) scale(0.5);
+		-webkit-transition: all 0.8s ease-in-out;
+			 -moz-transition: all 0.8s ease-in-out;
+				-ms-transition: all 0.8s ease-in-out;
+				 -o-transition: all 0.8s ease-in-out;
+						transition: all 0.8s ease-in-out;
+}
+#reveal2.visible {
+	opacity: 1;
+	-webkit-transform: none;
+		 -moz-transform: none;
+			-ms-transform: none;
+			 -o-transform: none;
+					transform: none;
 }
