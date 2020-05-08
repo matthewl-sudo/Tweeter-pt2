@@ -18,6 +18,8 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
         <!-- Styles -->
+        https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css
+        <link href=" https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link rel="shortcut icon" type="icon" href="images/cat-purr.ico">
     </head>
