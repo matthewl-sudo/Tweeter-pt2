@@ -15,6 +15,7 @@ use App\User;
 class TweetsController extends Controller
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function index(Request $request){
         $tweets = Tweet::orderBy('created_at', 'desc')->paginate(10);
         // dd($request);
@@ -46,6 +47,8 @@ class TweetsController extends Controller
 
 >>>>>>> a6b6796094882a6c56f2925a5970a47bc31da600
     }
+=======
+>>>>>>> parent of a6b6796... Vue w/ajax + infintie scroll
     public function saveTweet(Request $request){//create tweet
         $user = Auth::user();
         $userId = $user->id;
@@ -61,7 +64,7 @@ class TweetsController extends Controller
         $deleteTweet = Tweet::findOrFail($tweet_id);//find that tweet id and destroy it.
         // var_dump($id);
         $deleteTweet->delete();
-        // return redirect('/home');
+        return redirect('/home');
     }
     public function updateTweet(Request $request, $tweet_id){
         $updateTweet = Tweet::findOrFail($tweet_id);//find that tweet id and update it.
@@ -117,13 +120,13 @@ class TweetsController extends Controller
         $user = Auth::user();
         $userId = $user->id;
         $tweetlikeModel = DB::table('tweetslikes')
-                            ->where('user_id','=',$userId)  //find record that matches query
+                            ->where('user_id','=',$userId)//find record that matches query
                             ->where('tweet_id','=',$tweetId)->first();
-        if(isset($tweetlikeModel)){ //if record exists then delete it.
+        if(isset($tweetlikeModel)){//if record exists then delete it.
             $deletelike = Tweetlike::where('user_id','=',$userId)
                                    ->where('tweet_id','=',$tweetId)->first();
             $deletelike->delete();
-            // return redirect('/home');
+            return redirect('/home');
         }
         else{//else save a record in the table.
             $tweetlikeModel = new Tweetlike();
@@ -157,12 +160,12 @@ class TweetsController extends Controller
         $allTweets = Tweet::all();
         $allTweetsJson = json_encode($allTweets);
         return $allTweetsJson;
-        // var_dump($allTweetsJson);
+        // echo "hello";
     }
     public function getUsers(){
         return json_encode(User::all());
     }
     public function followUserApi(){
-
+        
     }
 }

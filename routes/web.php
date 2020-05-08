@@ -17,17 +17,20 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/tweet', 'TweetsController@index');
-
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home', 'HomeController@index')->name('home');
 
+<<<<<<< HEAD
 Route::post('/create-tweet', 'TweetsController@saveTweet');
 <<<<<<< HEAD
 Route::post('/delete-tweet{id}', 'TweetsController@deleteTweet');
 =======
 Route::post('/destroy-tweet/{id}', 'TweetsController@deleteTweet');
 >>>>>>> a6b6796094882a6c56f2925a5970a47bc31da600
+=======
+Route::post('/tweets', 'TweetsController@saveTweet');
+Route::post('/delete-tweet{id}', 'TweetsController@deleteTweet');
+>>>>>>> parent of a6b6796... Vue w/ajax + infintie scroll
 Route::post('/update-tweet{id}', 'TweetsController@updateTweet');
 
 Route::post('/comments', 'TweetsController@saveComment');

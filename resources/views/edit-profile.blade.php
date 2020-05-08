@@ -10,7 +10,7 @@
     <div class="col-10">
         <div class="form-group col-md-12 p-0">
             <label for="inputAddress">Address</label>
-            <input type="text" class="form-control" name="address" id="inputAddress" value="1234 Main St">
+            <input type="text" class="form-control" name="address" id="inputAddress" placeholder="1234 Main St">
         </div>
         <div class="form-group col-md-12 p-0">
             <label for="inputAddress2">Image Url</label>

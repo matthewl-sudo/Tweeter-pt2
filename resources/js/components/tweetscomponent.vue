@@ -1,9 +1,5 @@
 <template>
     <div class="card-header p-0">
-        <h1 v-for="(tweet, index) in tweets"
-                :tweet="tweet"
-                :key="index"
-                >{{tweet.tweet_id}}</h1>
         <div class="btn-group float-right m-0">
             <button type="button" class="btn btn-outline-info dropdown-toggle p-1" style="color:black;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-paw"></i>
@@ -26,24 +22,7 @@
 <script>
     export default {
         mounted() {
-            console.log('Component mounted yay!')
-        },
-        data(){
-            return{
-                tweets:[]
-            }
-        },
-        methods: {
-        fetchTweets() {
-            var self = this;
-            axios({
-                method: 'get',
-                url: '/home',
-            }).then(function(response) {
-                self.tweets = response.data;
-                console.log(response.data);
-                });
-            }
+            console.log('Component mounted.')
         }
     }
 </script>

@@ -10654,16 +10654,13 @@ a.text-dark:focus {
     font-size: 60%;
   }
 
-  .row-height {
-    height: 150vh;
+  .row {
+    height: 80%;
   }
 
-  .row-height div {
-    margin-bottom: 1rem;
-  }
-
-  .row-height div iframe {
-    display: none;
+  .row #left-side {
+    height: 70%;
+    margin-top: 20%;
   }
 }
 
@@ -10679,21 +10676,6 @@ a.text-dark:focus {
   nav ul li a:hover span,
   nav ul li a:hover i {
     color: #00aced;
-  }
-
-  .row-height {
-    height: 100vh;
-  }
-
-  #reveal1 {
-    opacity: 0;
-    transform: scale(0.9);
-    transition: all 1s ease-in-out;
-  }
-
-  #reveal1.visible {
-    opacity: 1;
-    transform: none;
   }
 }
 
@@ -10757,63 +10739,52 @@ col {
   opacity: 0.5;
 }
 
-.row-height .left-side div {
+.row-height {
+  height: 100vh;
+}
+
+.row-height #left-side {
+  background-color: #1DA1F2;
+}
+
+.row-height #left-side div {
   color: white;
   text-align: center;
   position: relative;
   top: 20%;
 }
 
-.row-height .left-side:nth-of-type(even) {
-  background-color: #1DA1F2;
-}
-
-.row-height .right-side #login {
+.row-height #right-side #login {
   border-radius: 60px;
   position: absolute;
   right: 20%;
   top: 20%;
 }
 
-.row-height .right-side h1,
-.row-height .right-side h2,
-.row-height .right-side h3,
-.row-height .right-side h4,
-.row-height .right-side ul,
-.row-height .right-side img {
+.row-height #right-side h1,
+.row-height #right-side h2,
+.row-height #right-side h4,
+.row-height #right-side ul {
   text-align: center;
   position: relative;
   top: 25%;
 }
 
-.row-height .right-side h1 #signup,
-.row-height .right-side h2 #signup,
-.row-height .right-side h3 #signup,
-.row-height .right-side h4 #signup,
-.row-height .right-side ul #signup,
-.row-height .right-side img #signup {
+.row-height #right-side h1 #signup,
+.row-height #right-side h2 #signup,
+.row-height #right-side h4 #signup,
+.row-height #right-side ul #signup {
   border: 1px solid;
   border-radius: 60px;
   box-shadow: 0 0 2px;
   background-color: #1DA1F2;
 }
 
-.row-height .right-side h1 #signup a,
-.row-height .right-side h2 #signup a,
-.row-height .right-side h3 #signup a,
-.row-height .right-side h4 #signup a,
-.row-height .right-side ul #signup a,
-.row-height .right-side img #signup a {
+.row-height #right-side h1 #signup a,
+.row-height #right-side h2 #signup a,
+.row-height #right-side h4 #signup a,
+.row-height #right-side ul #signup a {
   color: black;
-}
-
-.row-height .right-side h1 #signup a:hover,
-.row-height .right-side h2 #signup a:hover,
-.row-height .right-side h3 #signup a:hover,
-.row-height .right-side h4 #signup a:hover,
-.row-height .right-side ul #signup a:hover,
-.row-height .right-side img #signup a:hover {
-  z-index: 2;
 }
 
 .login-message {
@@ -10844,48 +10815,5 @@ col {
   to {
     opacity: 0;
   }
-}
-
-.img-fluid {
-  width: 75%;
-  justify-content: center;
-}
-
-.digit {
-  opacity: 0;
-  transform: translateX(-40px);
-  transition: all 2.9s ease-out;
-}
-
-.digit.visible {
-  opacity: 1;
-  transform: none;
-}
-
-.digit:nth-child(2) {
-  margin-top: 5px;
-}
-
-.digit:nth-child(3) {
-  margin-top: 10px;
-}
-
-.digit:nth-child(4) {
-  margin-top: 15px;
-}
-
-.digit:nth-child(5) {
-  margin-top: 20px;
-}
-
-#reveal2 {
-  opacity: 0;
-  transform: rotate(40deg) scale(0.5);
-  transition: all 0.8s ease-in-out;
-}
-
-#reveal2.visible {
-  opacity: 1;
-  transform: none;
 }
 

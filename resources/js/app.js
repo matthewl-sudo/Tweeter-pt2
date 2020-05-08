@@ -19,12 +19,12 @@ window.Vue = require('vue');
 Vue.component('tweet', {
 =======
 
+import tweetscomponent from './components/tweetscomponent.vue';
 
-// Vue.component('tweetscomponent', tweetscomponent);
+Vue.component('tweetscomponent', tweetscomponent);
 // Vue.component('tweetscomponent', require('./components/tweetscomponent.vue'));
-// import tweetscomponent from './components/tweetscomponent.vue';
-// Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
+<<<<<<< HEAD
 Vue.use(require('vue-resource'));
 Vue.component('InfiniteLoading', require('vue-infinite-loading'));
 
@@ -181,13 +181,30 @@ Vue.component('tweet', { //Tweet Card 'News' Feed
                     </comments>
 >>>>>>> a6b6796094882a6c56f2925a5970a47bc31da600
                 </span>
+=======
+Vue.component('tweetsomponent', {
+    template: `
+    <div class="card-header p-0">
+        <div class="btn-group float-right m-0">
+            <button type="button" class="btn btn-outline-info dropdown-toggle p-1" style="color:black;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-paw"></i>
+            </button>
+            <div class="dropdown-menu" style="z-index:2;">
+                <form class="" action="/delete-tweet" method="post">
+                    <button class="btn btn-danger btn-sm"type="submit" style="" name="tweet_id" value="Delete"><img src="/images/litter-box.png" style="width:20%; float:left;" alt="litter-box">LitterBox/Delete</button>
+                </form>
+                <form class="" action="/update-tweet" method="post">
+                    <textarea name="tweet" rows="2" cols="40" placeholder="Edit Tweet?"></textarea>
+                    <button class="btn btn-dark"type="submit" style="" name="tweet_id" value="Update"><i class="fas fa-pen"></i> Update</button>
+                </form>
+            </div>
+            <div class="" style="height:2rem">
+>>>>>>> parent of a6b6796... Vue w/ajax + infintie scroll
             </div>
         </div>
-        <infinite-loading @distance="1" @infinite="infiniteHandler" spinner="bubbles">
-        <div slot="no-more">No More Tweets🙀😿</div>
-        </infinite-loading>
     </div>
     `,
+<<<<<<< HEAD
     data(){
         return{
             tweets:[],
@@ -256,6 +273,12 @@ Vue.component('tweet', { //Tweet Card 'News' Feed
         // this.fetchTweets();
         console.log("mounting confirm");
 >>>>>>> a6b6796094882a6c56f2925a5970a47bc31da600
+=======
+    data() {
+        return {
+            tweet: "",
+        }
+>>>>>>> parent of a6b6796... Vue w/ajax + infintie scroll
     }
 });
 const app = new Vue({
@@ -265,9 +288,13 @@ const app = new Vue({
 },
 mounted() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.log('its not working!!');
 =======
     console.log('component working!!');
 >>>>>>> a6b6796094882a6c56f2925a5970a47bc31da600
+=======
+    console.log('its working');
+>>>>>>> parent of a6b6796... Vue w/ajax + infintie scroll
     }
 });
