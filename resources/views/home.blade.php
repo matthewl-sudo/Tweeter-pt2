@@ -29,15 +29,52 @@
                 <tweet></tweet>
                 <!-- <tweetscomponent>HIIII</tweetscomponent> -->
             </div>
-        <div class="col col-md-4  d-none d-lg-block" id="sidebar">
-            <nav class=" sticky-top">
+        </div>
+        <div class="col col-md-4  d-none d-lg-block" id="sidebar" style="z-index:1;">
+            <aside class="ticky-nav">
                 <ul class="nav float-right">
-                    <div class="" id="followers-box">
+                    <!-- Search form -->
+                    <form class="search-bar">
+                        <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-3">
+                           <div class="input-group">
+                                <input type="search" placeholder="Search name or #" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+                                <div class="input-group-append">
+                                    <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- <div class="" id="followers-box">
 
 
+                    </div> -->
+                    <h5>Hey {{ucwords(Auth::user()->name)}}!<br>Here are some people to follow</h5>
+                    <div class="list-group" style="width:150%;">
+                        @if(session()->has('message'))
+                        <p class="alert alert-success"> {{ session()->get('message') }}</p>
+                        @endif
+                        @if(isset($followArr[Auth::user()->id]))
+                            Following: {{$followArr[Auth::user()->id]['following']}}
+                            Followers: {{$followArr[Auth::user()->id]['followers']}}
+                        @endif
+                        @foreach($users as $user)
+                            @if($user->id != Auth::user()->id)  <!-- Ignores current user -->
+                            <div class="list-group-item list-group-item-action flex-column align-items-start p-1">
+                                <span class="d-flex w-100 justify-content-between">
+                                    <img src="{{$user->userprofile->image_url}}" style="width:15%;" alt="litter-box">
+                                    <h6 class="mb-1">{{ucwords($user->name)}}</h6>
+                                    <small>{{$user->userprofile->location}}</small>
+                                    <form class="d-block" action="/follow{{$user->id}}" method="post">
+                                        @CSRF
+                                        <input class="btn btn-sm btn-info" type="submit" name="{{$user->id}}" value="Follow">
+                                    </form>
+                                </span>
+                            </div>
+                            @endif
+                        @endforeach
                     </div>
                 </ul>
-            </nav>
+            </aside>
         </div>
     </div>
 </div>

@@ -47,6 +47,7 @@ class HomeController extends Controller
             $tweetLikes = count($tweetLikesArray);
             $aTweet["likes"] = $tweetLikes;
             $tweetsContainer[$tweet->id] = $aTweet;
+            
         }
         $userId = Auth::user()->id;
         $userModel = new User();
