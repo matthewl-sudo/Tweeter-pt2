@@ -17,7 +17,7 @@
                         Purrrrfect! You are logged in!
                     </span>
                 </span>
-                <form class="" action="/tweets" method="post">
+                <form class="" action="/create-tweet" method="post">
                     <div class="mb-3 col-md-11 d-inline">
                         @csrf
                         <textarea class="form-control mb-2" id="" placeholder="What's happening?" name="tweet" value="{{old('tweet')}}" required></textarea>
@@ -25,8 +25,9 @@
                     </div>
                 </form>
             </div>
-            <div class="card" id="app">
-                <tweetscomponent>HIIII</tweetscomponent>
+            <div id="app">
+                <tweet></tweet>
+                <!-- <tweetscomponent>HIIII</tweetscomponent> -->
             </div>
         <div class="col col-md-4  d-none d-lg-block" id="sidebar">
             <nav class=" sticky-top">
@@ -42,7 +43,8 @@
 </div>
 @endsection
 @section('scripts')
-<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
-<script type="text/javascript">var currentUser ="<? $user->id ?>";</script>
-<script type="text/javascript" src="/js/followers-populate.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<!-- <script type="text/javascript" src="{{ asset('js/app.js') }}"></script> -->
+<!-- <script type="text/javascript">var currentUser ="<? $user->id ?>";</script>
+<script type="text/javascript" src="/js/followers-populate.js"></script> -->
 @endsection

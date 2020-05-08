@@ -17,10 +17,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/tweet', 'TweetsController@index');
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home', 'HomeController@index')->name('home');
 
-Route::post('/tweets', 'TweetsController@saveTweet');
+Route::post('/create-tweet', 'TweetsController@saveTweet');
 Route::post('/delete-tweet{id}', 'TweetsController@deleteTweet');
 Route::post('/update-tweet{id}', 'TweetsController@updateTweet');
 

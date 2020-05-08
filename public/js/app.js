@@ -1829,44 +1829,6 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/tweetscomponent.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/tweetscomponent.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log('Component mounted.');
-  }
-});
-
-/***/ }),
-
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.js":
 /*!*****************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.js ***!
@@ -37146,206 +37108,6 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/tweetscomponent.vue?vue&type=template&id=5b19da20&":
-/*!******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/tweetscomponent.vue?vue&type=template&id=5b19da20& ***!
-  \******************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-header p-0" }, [
-      _c("div", { staticClass: "btn-group float-right m-0" }, [
-        _c(
-          "button",
-          {
-            staticClass: "btn btn-outline-info dropdown-toggle p-1",
-            staticStyle: { color: "black" },
-            attrs: {
-              type: "button",
-              "data-toggle": "dropdown",
-              "aria-haspopup": "true",
-              "aria-expanded": "false"
-            }
-          },
-          [_c("i", { staticClass: "fas fa-paw" })]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "dropdown-menu", staticStyle: { "z-index": "2" } },
-          [
-            _c("form", { attrs: { action: "/delete-tweet", method: "post" } }, [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-danger btn-sm",
-                  attrs: { type: "submit", name: "tweet_id", value: "Delete" }
-                },
-                [
-                  _c("img", {
-                    staticStyle: { width: "20%", float: "left" },
-                    attrs: { src: "/images/litter-box.png", alt: "litter-box" }
-                  }),
-                  _vm._v("LitterBox/Delete")
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("form", { attrs: { action: "/update-tweet", method: "post" } }, [
-              _c("textarea", {
-                attrs: {
-                  name: "tweet",
-                  rows: "2",
-                  cols: "40",
-                  placeholder: "Edit Tweet?"
-                }
-              }),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-dark",
-                  attrs: { type: "submit", name: "tweet_id", value: "Update" }
-                },
-                [_c("i", { staticClass: "fas fa-pen" }), _vm._v(" Update")]
-              )
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticStyle: { height: "2rem" } })
-      ])
-    ])
-  }
-]
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
-  \********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
-/* globals __VUE_SSR_CONTEXT__ */
-
-// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
-// This module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle.
-
-function normalizeComponent (
-  scriptExports,
-  render,
-  staticRenderFns,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
-) {
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
-
-  // render functions
-  if (render) {
-    options.render = render
-    options.staticRenderFns = staticRenderFns
-    options._compiled = true
-  }
-
-  // functional template
-  if (functionalTemplate) {
-    options.functional = true
-  }
-
-  // scopedId
-  if (scopeId) {
-    options._scopeId = 'data-v-' + scopeId
-  }
-
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = shadowMode
-      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
-      : injectStyles
-  }
-
-  if (hook) {
-    if (options.functional) {
-      // for template-only hot-reload because in that case the render fn doesn't
-      // go through the normalizer
-      options._injectStyles = hook
-      // register for functioal component in vue file
-      var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return originalRender(h, context)
-      }
-    } else {
-      // inject component registration as beforeCreate hook
-      var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    }
-  }
-
-  return {
-    exports: scriptExports,
-    options: options
-  }
-}
-
-
-/***/ }),
-
 /***/ "./node_modules/vue/dist/vue.common.dev.js":
 /*!*************************************************!*\
   !*** ./node_modules/vue/dist/vue.common.dev.js ***!
@@ -49379,12 +49141,9 @@ module.exports = function(module) {
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_tweetscomponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/tweetscomponent.vue */ "./resources/js/components/tweetscomponent.vue");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -49392,23 +49151,43 @@ __webpack_require__.r(__webpack_exports__);
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js"); // Vue.component('tweetscomponent', tweetscomponent);
+// Vue.component('tweetscomponent', require('./components/tweetscomponent.vue'));
+// import tweetscomponent from './components/tweetscomponent.vue';
+// Vue.use(require('vue-resource'));
+// Vue.component('example-component', require('./components/ExampleComponent.vue'));
+// Vue.component('InfiniteLoading', require('vue-infinite-loading'));
 
-Vue.component('tweetscomponent', _components_tweetscomponent_vue__WEBPACK_IMPORTED_MODULE_0__["default"]); // Vue.component('tweetscomponent', require('./components/tweetscomponent.vue'));
-
-Vue.component('tweetsomponent', {
-  template: "\n    <div class=\"card-header p-0\">\n        <div class=\"btn-group float-right m-0\">\n            <button type=\"button\" class=\"btn btn-outline-info dropdown-toggle p-1\" style=\"color:black;\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                <i class=\"fas fa-paw\"></i>\n            </button>\n            <div class=\"dropdown-menu\" style=\"z-index:2;\">\n                <form class=\"\" action=\"/delete-tweet\" method=\"post\">\n                    <button class=\"btn btn-danger btn-sm\"type=\"submit\" style=\"\" name=\"tweet_id\" value=\"Delete\"><img src=\"/images/litter-box.png\" style=\"width:20%; float:left;\" alt=\"litter-box\">LitterBox/Delete</button>\n                </form>\n                <form class=\"\" action=\"/update-tweet\" method=\"post\">\n                    <textarea name=\"tweet\" rows=\"2\" cols=\"40\" placeholder=\"Edit Tweet?\"></textarea>\n                    <button class=\"btn btn-dark\"type=\"submit\" style=\"\" name=\"tweet_id\" value=\"Update\"><i class=\"fas fa-pen\"></i> Update</button>\n                </form>\n            </div>\n            <div class=\"\" style=\"height:2rem\">\n            </div>\n        </div>\n    </div>\n    ",
+Vue.component('tweet', {
+  template: "\n    <div>\n        <div class=\"card\" v-for=\"(tweet, index) in tweets\"\n                :tweet=\"tweet\"\n                :key=\"index\">\n            <div class=\"card-header p-0\">\n                name\n                <div class=\"btn-group float-right m-0\">\n                    <button type=\"button\" class=\"btn btn-outline-info dropdown-toggle p-1\" style=\"color:black;\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                        <i class=\"fas fa-paw\"></i>\n                    </button>\n                    <div class=\"dropdown-menu\" style=\"z-index:2;\">\n                        <form class=\"\" action=\"/delete-tweet\" method=\"post\">\n                            <button class=\"btn btn-danger btn-sm\"type=\"submit\" style=\"\" name=\"tweet_id\" value=\"Delete\"><img src=\"~/images/litter-box.png\" style=\"width:20%; float:left;\" alt=\"litter-box\">LitterBox/Delete</button>\n                        </form>\n                        <form class=\"\" action=\"/update-tweet\" method=\"post\">\n                            <textarea name=\"tweet\" rows=\"2\" cols=\"40\" placeholder=\"Edit Tweet?\"></textarea>\n                            <button class=\"btn btn-dark\"type=\"submit\" style=\"\" name=\"tweet_id\" value=\"Update\"><i class=\"fas fa-pen\"></i> Update</button>\n                        </form>\n                    </div>\n                    <div class=\"\" style=\"height:2rem\">\n                    </div>\n                </div>\n            </div>\n            <div class=\"card-body\">\n                <small class=\"float-right\">\n                    {{tweet.created_at}}\n                </small>\n                <blockquote class=\"blockquote mb-0\">\n                    <p>\n                        {{tweet.tweet}}\n                    </p>\n                </blockquote>\n                <span class=\"icons\">\n                    <button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#exampleModal{tweet.id}\"><i class=\"far fa-comment\"></i></button>\n                    <div class=\"modal fade\" id=\"exampleModal{tweet.id}\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n                        <div class=\"modal-dialog\" role=\"document\">\n                            <form class=\"modal-content\" action=\"/comments\" method=\"post\">\n                                @submit.prevent\n                                <input type=\"hidden\" name=\"tweet_id\" value=\"{tweet.id}\">\n                                <div class=\"modal-header\">\n                                    <h5 class=\"modal-title\" id=\"exampleModalLabel\">Comment on {{tweet.user_id}}'s Tweet?</h5>\n                                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                                        <span aria-hidden=\"true\">&times;</span>\n                                    </button>\n                                </div>\n                                <textarea class=\"modal-body\" name=\"comment\">\n\n                                </textarea>\n                                <div class=\"modal-footer\">\n                                    <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>\n                                    <button type=\"submit\" name=\"user_id\" class=\"btn btn-primary\">Comment</button>\n                                </div>\n                            </form>\n                        </div>\n                    </div>\n                    <button class=\"btn btn-success\"><i class=\"fas fa-retweet\"></i></button>\n                    <!-- <button class=\"btn btn-danger\"><i class=\"far fa-heart\"></i>#</button> -->\n                    <a class=\"btn btn-danger\" href=\"/tweets/{tweet.id}/like\"><i class=\"far fa-heart\"></i>#</a>\n                    <button class=\"btn btn-primary\"><i class=\"fas fa-share-square\"></i></button>\n                    <div class=\"btn-group\">\n                        <button type=\"button\" class=\"btn btn-info dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                            View Comments\n                        </button>\n                    </div>\n                </span>\n            </div>\n        </div>\n    </div>\n    ",
   data: function data() {
     return {
-      tweet: ""
+      tweets: [],
+      page: 1
     };
+  },
+  methods: {
+    fetchTweets: function fetchTweets() {
+      var self = this;
+      axios({
+        method: 'get',
+        url: '/code/tweeter-pt2/public/tweet?page=' + this.page
+      }).then(function (response) {
+        self.tweets = response.data.data;
+        console.log(response.data);
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.fetchTweets();
+    console.log("bsbshb");
   }
 });
 var app = new Vue({
   el: '#app',
   methods: {},
   mounted: function mounted() {
-    console.log('its working');
+    console.log('its not working!!');
   }
 });
 
@@ -49469,75 +49248,6 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
-
-/***/ }),
-
-/***/ "./resources/js/components/tweetscomponent.vue":
-/*!*****************************************************!*\
-  !*** ./resources/js/components/tweetscomponent.vue ***!
-  \*****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _tweetscomponent_vue_vue_type_template_id_5b19da20___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tweetscomponent.vue?vue&type=template&id=5b19da20& */ "./resources/js/components/tweetscomponent.vue?vue&type=template&id=5b19da20&");
-/* harmony import */ var _tweetscomponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tweetscomponent.vue?vue&type=script&lang=js& */ "./resources/js/components/tweetscomponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _tweetscomponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _tweetscomponent_vue_vue_type_template_id_5b19da20___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _tweetscomponent_vue_vue_type_template_id_5b19da20___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/tweetscomponent.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/tweetscomponent.vue?vue&type=script&lang=js&":
-/*!******************************************************************************!*\
-  !*** ./resources/js/components/tweetscomponent.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_tweetscomponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./tweetscomponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/tweetscomponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_tweetscomponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/tweetscomponent.vue?vue&type=template&id=5b19da20&":
-/*!************************************************************************************!*\
-  !*** ./resources/js/components/tweetscomponent.vue?vue&type=template&id=5b19da20& ***!
-  \************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_tweetscomponent_vue_vue_type_template_id_5b19da20___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./tweetscomponent.vue?vue&type=template&id=5b19da20& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/tweetscomponent.vue?vue&type=template&id=5b19da20&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_tweetscomponent_vue_vue_type_template_id_5b19da20___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_tweetscomponent_vue_vue_type_template_id_5b19da20___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
 
 /***/ }),
 

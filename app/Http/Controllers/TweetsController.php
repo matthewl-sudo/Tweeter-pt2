@@ -14,6 +14,19 @@ use App\User;
 
 class TweetsController extends Controller
 {
+    public function index(Request $request){
+        $tweets = Tweet::orderBy('created_at', 'desc')->paginate(10);
+        // dd($request);
+        return response()->json($tweets);
+
+        // $tweets = Tweet::orderBy('created_at', 'desc')->get();
+        // return response()->json($tweets);
+        // var_dump(response()->json($tweets));
+
+        // $tweets = Tweet::all();
+        // // var_dump($tweets);
+        // return $tweets->toJson();
+    }
     public function saveTweet(Request $request){//create tweet
         $user = Auth::user();
         $userId = $user->id;
@@ -125,12 +138,12 @@ class TweetsController extends Controller
         $allTweets = Tweet::all();
         $allTweetsJson = json_encode($allTweets);
         return $allTweetsJson;
-        // echo "hello";
+        // var_dump($allTweetsJson);
     }
     public function getUsers(){
         return json_encode(User::all());
     }
     public function followUserApi(){
-        
+
     }
 }
